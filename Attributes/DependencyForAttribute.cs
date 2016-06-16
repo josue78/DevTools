@@ -2,7 +2,7 @@
 
 namespace DevTools.Attributes
 {
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    [AttributeUsage( AttributeTargets.Method)]
     public class DependencyForAttribute : Attribute
     {
         public Type Type { get; set; }
