@@ -40,10 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\CreateAttribute.cs" />
+    <Compile Include="Attributes\DeleteAtribute.cs" />
     <Compile Include="Attributes\DependencyForAttribute.cs" />
     <Compile Include="Attributes\DependencyOfAttribute.cs" />
+    <Compile Include="Attributes\FileUploadAttributte.cs" />
     <Compile Include="Attributes\InputTextAttribute.cs" />
     <Compile Include="Attributes\CrudAttribute.cs" />
+    <Compile Include="Attributes\ReadAttribute.cs" />
+    <Compile Include="Attributes\UpdateAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
