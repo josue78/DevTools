@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Web.Http;
 using DevTools.Attributes;
 using Newtonsoft.Json;
 
@@ -29,6 +28,16 @@ namespace DevTools
     }
     public static class Metadata
     {
+        public static CrudResult GetMetadata(this object item)
+        {
+            var crud = item.GetType().GetCustomAttribute(typeof(CrudAttribute)) as CrudAttribute;
+            if (crud == null) return null;
+            var result = new CrudResult
+            {
+                ReadResult = crud.ReadResult()
+            };
+            return result;
+        }
         public static string GetCrudMetadata(this object item)
         {
             var crud = item.GetType().GetCustomAttribute(typeof(CrudAttribute)) as CrudAttribute;
